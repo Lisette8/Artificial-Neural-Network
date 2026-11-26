@@ -13,6 +13,7 @@ print("Test images:", X_test.shape)
 print("Test labels:", y_test.shape)
 
 
+# Visualize the dataset
 class_names = [
     "T-shirt/top", "Trouser", "Pullover", "Dress",
     "Coat", "Sandal", "Shirt", "Sneaker",
@@ -29,3 +30,17 @@ for i in range(10):
 
 plt.tight_layout()
 plt.show()
+
+
+# Data preprocessing
+X_train = X_train.astype("float32") / 255.0
+X_test = X_test.astype("float32") / 255.0
+
+print(X_train.min(), X_train.max())
+
+
+X_train = X_train.reshape(-1, 784)
+X_test = X_test.reshape(-1, 784)
+
+print(X_train.shape)
+print(X_test.shape)
