@@ -78,3 +78,28 @@ history = model.fit(
     validation_split=0.2,
     verbose=1
 )
+
+
+
+# Visualize the learning process
+plt.figure(figsize=(8, 5))
+
+plt.plot(history.history["accuracy"], label="Training Accuracy")
+plt.plot(history.history["val_accuracy"], label="Validation Accuracy")
+
+plt.xlabel("Epoch")
+plt.ylabel("Accuracy")
+plt.title("Model Accuracy")
+plt.legend()
+plt.grid()
+
+plt.show()
+
+
+
+
+# Evaluate the model
+test_loss, test_accuracy = model.evaluate(X_test, y_test)
+
+print("Test Loss:", test_loss)
+print("Test Accuracy:", test_accuracy)
