@@ -109,3 +109,23 @@ print("Test Accuracy:", test_accuracy)
 predictions = model.predict(X_test)
 
 print(predictions.shape)
+
+index = 0
+
+prediction = predictions[index]
+predicted_class = np.argmax(prediction)
+
+print("Predicted:", class_names[predicted_class])
+print("Actual:", class_names[y_test[index]])
+print("Confidence:", prediction[predicted_class])
+
+#
+plt.imshow(X_test[index].reshape(28, 28), cmap="gray")
+
+plt.title(
+    f"Predicted: {class_names[predicted_class]}\n"
+    f"Actual: {class_names[y_test[index]]}"
+)
+
+plt.axis("off")
+plt.show()
