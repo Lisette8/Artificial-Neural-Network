@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from tensorflow.keras.datasets import fashion_mnist
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 
 # Load dataset
 (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data()
@@ -44,3 +46,14 @@ X_test = X_test.reshape(-1, 784)
 
 print(X_train.shape)
 print(X_test.shape)
+
+
+
+# Build the neural network architecture
+model = Sequential([
+    Dense(128, activation="relu", input_shape=(784,)),
+    Dense(64, activation="relu"),
+    Dense(10, activation="softmax")
+])
+
+model.summary()
