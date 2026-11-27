@@ -51,8 +51,8 @@ Le script affiche un tableau récapitulatif et génère trois images : `learning
 **Option 1 : avec Git**
 
 ```bash
-git clone https://github.com/<ton-utilisateur>/<nom-du-repo>.git
-cd <nom-du-repo>
+git clone https://github.com/Lisette8/Artificial-Neural-Network.git
+cd Artificial-Neural-Network
 ```
 
 
