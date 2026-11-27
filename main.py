@@ -119,7 +119,7 @@ print("Predicted:", class_names[predicted_class])
 print("Actual:", class_names[y_test[index]])
 print("Confidence:", prediction[predicted_class])
 
-#
+# Visualize the prediction
 plt.imshow(X_test[index].reshape(28, 28), cmap="gray")
 
 plt.title(
